@@ -1,0 +1,16 @@
+<li class="rubygem row">
+  <div class="name-and-details">
+    <div class="seven columns content name">
+      <strong><%= link_to(rubygem.name, rubygems_path(rubygem)) %></strong>
+      <strong><%= rubygem.version %></strong>
+    </div>
+    <div class="five columns content details">
+      <span class="right downloads"><%= rubygem.download_count %></span>
+    </div>
+  </div>
+  <div class="summary">
+    <div class="twelve columns">
+      <%= truncate(rubygem.info, :length => 100) %>
+    </div>
+  </div>
+</li>

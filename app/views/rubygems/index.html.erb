@@ -1,0 +1,34 @@
+<% content_for(:title, "Gems") %>
+<section class="rubygems row">
+  <div class="gems-list-container row">
+    <div class="row title">
+      <div class="one columns"></div>
+      <div class="ten columns content">
+        <h1>Gems</h1>
+      </div>
+      <div class="one columns"></div>
+    </div>
+    <div class="row entries">
+      <div class="one columns"></div>
+      <div class="ten columns content">
+        <span>Displaying Rubygem</span>
+        <strong><%= view.page_start_at %> - <%= view.gems_per_page %></strong>
+        <span>of</span>
+        <strong><%= view.total_number_of_gems %></strong>
+        <span>in total</span>
+      </div>
+      <div class="one columns"></div>
+    </div>
+    <div class="row gems">
+      <div class="one columns"></div>
+      <div class="ten columns content">
+        <ol>
+          <% view.rubygems.each do |rubygem| %>
+            <%= render("/rubygems/index/listing", :rubygem => rubygem) %>
+          <% end %>
+        </ol>
+      </div>
+      <div class="one columns"></div>
+    </div>
+  </div>
+</section>

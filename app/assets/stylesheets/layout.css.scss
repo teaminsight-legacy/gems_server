@@ -1,0 +1,30 @@
+BODY {
+  > DIV.container.top-bar {
+    padding: 15px 20px 13px;
+    background-color: #000;
+    border-bottom: solid 4px #00A5FF;
+
+    > DIV.row {
+      > DIV.header {
+        > H1 {
+          font-size: 1.6rem;
+          margin: 0;
+
+          > A {
+            color: #FFF;
+          }
+        }
+      }
+      > DIV.links {
+        > STRONG.right {
+          > A {
+            color: #FFF;
+          }
+        }
+      }
+    }
+  }
+  > DIV.container.main {
+
+  }
+}
